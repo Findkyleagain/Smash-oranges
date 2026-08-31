@@ -1,0 +1,42 @@
+:root{
+  --bg:#fef7e6;
+  --accent:#ff9f1c;
+  --muted:#666;
+}
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{margin:0;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);min-height:100vh;color:#222;overflow:hidden}
+header{padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.factory-name{display:flex;gap:8px;align-items:center}
+.factory-name input{padding:6px;border-radius:6px;border:1px solid #ccc}
+.stats{display:flex;gap:12px;align-items:center;color:var(--muted)}
+main{display:flex;gap:20px;padding:20px}
+.center{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px}
+#orangeContainer{position:relative;width:320px;height:320px;display:flex;align-items:center;justify-content:center}
+#orange{font-size:120px;transition:transform .6s ease,filter .6s ease}
+#orange.evo-1{transform:scale(1.05)}
+#orange.evo-2{transform:scale(1.13)}
+#orange.evo-3{transform:scale(1.22)}
+#orange.evo-4{transform:scale(1.32)}
+#orange.evo-5{transform:scale(1.45)}
+#orange.evo-6{transform:scale(1.6)}
+#orange.evo-7{transform:scale(1.78)}
+#orange.evo-8{transform:scale(1.98)}
+#orange.evo-9{transform:scale(2.2)}
+#orange.evo-10{transform:scale(2.5);filter:drop-shadow(0 8px 12px rgba(0,0,0,.2))}
+#hammer{position:absolute;right:6%;bottom:6%;font-size:44px;transform:rotate(-20deg);transition:transform .15s}
+.big{padding:12px 18px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:700}
+aside{width:360px;background:rgba(255,255,255,.7);padding:12px;border-radius:12px;height:560px;overflow:auto}
+.upgrade{display:flex;justify-content:space-between;align-items:center;padding:8px;border-bottom:1px solid #eee}
+.upgrade button{padding:6px 10px;border-radius:6px}
+.controls{display:flex;gap:8px;margin-top:12px}
+#rebirthBtn{background:#e0e0e0;border:0;padding:8px;border-radius:8px}
+#endBtn.danger{background:#fff;border:2px solid red;color:red;padding:8px;border-radius:8px}
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center}
+#overlay.hidden{display:none}
+#cutscene{position:relative;width:80vw;height:60vh;display:flex;align-items:center;justify-content:center}
+#bigHammer{font-size:160px;position:absolute;transform:translateY(-60vh);transition:transform .9s ease-in}
+#bigOrange{font-size:200px;transition:transform .5s}
+#falling{position:fixed;inset:0;pointer-events:none;z-index:-1}
+.fall{position:absolute;font-size:20px;opacity:.9;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.2}}
+.achievement{background:#fff9d9;padding:6px;border-radius:6px;margin:6px 0}

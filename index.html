@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smash Oranges</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="falling"></div>
+
+  <header>
+    <h1>Smash Oranges</h1>
+    <div class="factory-name">
+      <label>Factory name:</label>
+      <input id="factoryNameInput" placeholder="My Orange Factory">
+      <button id="changeName">Change</button>
+    </div>
+    <div class="stats">
+      <div>Orange Juice: <span id="juice">0</span></div>
+      <div>Per click: <span id="perClick">0</span></div>
+      <div>Rebirths: <span id="rebirths">0</span></div>
+      <div>Evolutions: <span id="evolutions">0</span>/<span id="evoCap">10</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="center">
+      <div id="orangeContainer">
+        <div id="orange" class="evo-0">🍊</div>
+        <div id="hammer">🔨</div>
+      </div>
+      <button id="smashBtn" class="big">Smash!</button>
+      <button id="evolveBtn">Evolve (cost: <span id="evoCost">-</span>)</button>
+    </section>
+
+    <aside>
+      <h2>Upgrades</h2>
+      <div id="upgrades"></div>
+
+      <h2>Achievements</h2>
+      <div id="achievements"></div>
+
+      <div class="controls">
+        <button id="rebirthBtn">Rebirth (reset everything)</button>
+        <button id="endBtn" class="danger">End the orange factory</button>
+      </div>
+    </aside>
+  </main>
+
+  <div id="overlay" class="hidden">
+    <div id="cutscene">
+      <div id="bigHammer">🔨</div>
+      <div id="bigOrange">🍊</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
